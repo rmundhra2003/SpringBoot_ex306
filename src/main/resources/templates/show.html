@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>SpringBoot Exercise 3.06</title>
+</head>
+<body>
+
+<div th:replace="base :: nav"></div>
+Name: <span th:text="${song.name}"></span> <br/>
+Album: <span th:text="${song.album.name}"></span> <br/>
+Year: <span th:text="${song.year}"></span> <br/>
+<a th:href="@{/delete/{id}(id=${song.id})}">Delete this song</a>
+</body>
+</html>
